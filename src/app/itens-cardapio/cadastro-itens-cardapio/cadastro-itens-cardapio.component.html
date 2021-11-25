@@ -1,1 +1,44 @@
-<p>cadastro-itens-cardapio works!</p>
+<div fxLayoutAlign="center">
+  <mat-card class="card-insercao">
+    <mat-card-header>
+      <mat-card-title *ngIf="itemCardapio.id == 0">Inserir Item</mat-card-title>
+      <mat-card-title *ngIf="itemCardapio.id != 0">Editar Item</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content align="center">
+
+      <mat-form-field apperance="fill" class="mat-form-simples">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="itemCardapio.nome" placeholder="Digite o nome">
+      </mat-form-field>
+
+      <mat-form-field apperance="fill" class="mat-form-simples">
+        <mat-label>Tipo</mat-label>
+        <input matInput [(ngModel)]="itemCardapio.tipo" placeholder="Digite o tipo">
+      </mat-form-field>
+
+      <mat-form-field apperance="fill" class="mat-form-simples">
+        <mat-label>Preço</mat-label>
+        <input matInput [(ngModel)]="itemCardapio.preco" placeholder="Digite o preço">
+      </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-content>
+
+      <mat-form-field apperance="fill" class="mat-form-simples" fxFill>
+        <mat-label>Descrição</mat-label>
+        <textarea matInput [(ngModel)]="itemCardapio.descricao" rows="5" placeholder="Digite a descrição"></textarea>
+      </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-footer align="center">
+      <button *ngIf="itemCardapio.id == 0" mat-raised-button color="primary" (click)="inserir(itemCardapio)">
+        <mat-icon>add</mat-icon> Adicionar
+      </button>
+      <button *ngIf="itemCardapio.id != 0" mat-raised-button color="primary" (click)="inserir(itemCardapio)">
+        <mat-icon>edit</mat-icon> Editar
+      </button>
+    </mat-card-footer>
+
+  </mat-card>
+</div>

@@ -4,8 +4,15 @@
       "id": 1,
       "nome": "Batata frita",
       "tipo": "Entrada",
-      "descricao": "balblablablalbalbla",
+      "descricao": "Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona.",
       "preco": 15
+    },
+    {
+      "id": 3,
+      "nome": "TesteEditado",
+      "tipo": "teste",
+      "descricao": "Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona.",
+      "preco": "14"
     }
   ]
 }
