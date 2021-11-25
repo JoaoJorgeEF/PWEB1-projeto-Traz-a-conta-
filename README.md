@@ -1,6 +1,6 @@
 # Projeto
 
-##Grupo:
+Grupo:
 
 .João Jorge Evangelista Fernandes
 
