@@ -1,0 +1,11 @@
+{
+  "itens-cardapio": [
+    {
+      "id": 1,
+      "nome": "Batata frita",
+      "tipo": "Entrada",
+      "descricao": "balblablablalbalbla",
+      "preco": 15
+    }
+  ]
+}

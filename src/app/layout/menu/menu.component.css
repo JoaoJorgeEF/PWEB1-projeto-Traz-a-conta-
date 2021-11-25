@@ -1,0 +1,8 @@
+.menu-background {
+  background-color: rgb(103,58,183);
+  height: 60px;
+}
+
+.menu-background button {
+  margin: 10px 10px 10px 10px;
+}
