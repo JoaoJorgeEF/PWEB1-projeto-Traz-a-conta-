@@ -1,5 +1,9 @@
 <div class="menu-background" >
   <button mat-raised-button color="primary" [routerLink]="['/home']">Home</button>
-  <button mat-raised-button color="primary" [routerLink]="['/listaritenscardapio']">Cardápio</button>
+  <button mat-raised-button [matMenuTriggerFor]="menu" color="primary">Cardápio</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/cadastraritemcardapio']">Cadastrar Item</button>
+    <button mat-menu-item [routerLink]="['/listaritenscardapio']">Listar</button>
+  </mat-menu>
   <button mat-raised-button color="primary">Log in</button>
 </div>

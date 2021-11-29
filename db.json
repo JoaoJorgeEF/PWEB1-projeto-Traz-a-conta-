@@ -13,6 +13,20 @@
       "tipo": "teste",
       "descricao": "Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona Esse é um teste de descrição só pra ver se funciona.",
       "preco": "14"
+    },
+    {
+      "id": 4,
+      "nome": "Burgão",
+      "tipo": "Lanches",
+      "descricao": "Sanduba da hora!",
+      "preco": "15"
+    },
+    {
+      "id": 5,
+      "nome": "Milkshake",
+      "tipo": "Bebida",
+      "descricao": "Ovomaltine gostoso pra chuchu!",
+      "preco": "10"
     }
   ]
 }

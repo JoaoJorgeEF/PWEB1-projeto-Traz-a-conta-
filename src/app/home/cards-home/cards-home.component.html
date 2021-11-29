@@ -1,1 +1,16 @@
-<p>cards-home works!</p>
+<div class="cards-container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center" >
+  <mat-card class="mat-card-main" fxFlex="25%" fxFlex="grow shrink initial" fxFlex="0 1 300px" [routerLink]="['/listaritenscardapio']">
+  <mat-card-title class="mat-card-main-info">
+    <mat-icon class="mat-card-main-icon">restaurant</mat-icon>
+    <h1 class="mat-card-main-name" >Cardápio</h1>
+  </mat-card-title>
+  </mat-card>
+
+  <mat-card class="mat-card-main" fxFlex="25%" fxFlex="grow shrink initial" fxFlex="0 1 300px">
+  <mat-card-title class="mat-card-main-info">
+    <mat-icon class="mat-card-main-icon">engineering</mat-icon>
+    <h1 class="mat-card-main-name" >Em construção</h1>
+  </mat-card-title>
+  </mat-card>
+
+</div>
