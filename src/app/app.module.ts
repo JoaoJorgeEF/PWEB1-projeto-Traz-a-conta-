@@ -9,10 +9,13 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from "@angular/router";
+import { TestePipe } from './shared/pipes/teste.pipe';
+import {FirestoreModule} from "./firestore/firestore.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestePipe
   ],
   imports: [
     AppRoutingModule,
@@ -24,6 +27,7 @@ import { RouterModule } from "@angular/router";
     ItensCardapioModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

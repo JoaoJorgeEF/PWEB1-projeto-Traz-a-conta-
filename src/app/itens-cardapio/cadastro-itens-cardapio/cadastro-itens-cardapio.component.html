@@ -1,8 +1,8 @@
 <div fxLayoutAlign="center">
   <mat-card class="card-insercao">
     <mat-card-header>
-      <mat-card-title *ngIf="itemCardapio.id == 0">Inserir Item</mat-card-title>
-      <mat-card-title *ngIf="itemCardapio.id != 0">Editar Item</mat-card-title>
+      <mat-card-title *ngIf="itemCardapio.id == '0'">Inserir Item</mat-card-title>
+      <mat-card-title *ngIf="itemCardapio.id != '0'">Editar Item</mat-card-title>
     </mat-card-header>
 
     <mat-card-content align="center">
@@ -32,10 +32,10 @@
 
     </mat-card-content>
     <mat-card-footer align="center">
-      <button *ngIf="itemCardapio.id == 0" mat-raised-button color="primary" (click)="inserir(itemCardapio)">
+      <button *ngIf="itemCardapio.id == '0'" mat-raised-button color="primary" (click)="inserir(itemCardapio)">
         <mat-icon>add</mat-icon> Adicionar
       </button>
-      <button *ngIf="itemCardapio.id != 0" mat-raised-button color="primary" (click)="inserir(itemCardapio)">
+      <button *ngIf="itemCardapio.id != '0'" mat-raised-button color="primary" (click)="inserir(itemCardapio)">
         <mat-icon>edit</mat-icon> Salvar
       </button>
     </mat-card-footer>
