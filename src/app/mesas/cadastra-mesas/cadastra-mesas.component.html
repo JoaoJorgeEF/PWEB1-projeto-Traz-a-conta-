@@ -8,12 +8,13 @@
     <mat-card-content align="center">
 
       <mat-form-field apperance="fill" class="mat-form-simples">
-        <mat-label>Usuários</mat-label>
-        <input matInput [(ngModel)]="usuario" placeholder="Digite o nome">
+        <mat-label>N° de Clientes</mat-label>
+        <input matInput [(ngModel)]="mesa.usuarios" placeholder="Digite a quantidade de clientes">
       </mat-form-field>
-      <button mat-raised-button color="primary" (click)="inserirNaLista(usuario)">
+<!--      <button mat-raised-button color="primary" (click)="inserirNaLista(usuario)">
         <mat-icon>add</mat-icon>
       </button>
+-->
     </mat-card-content>
     <mat-card-content>
 
@@ -32,17 +33,18 @@
 
 <br>
 
+<!--
 <div fxLayoutAlign="center">
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <mat-header-row *matHeaderRowDef="mostrarColunas"></mat-header-row>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<mat-header-row *matHeaderRowDef="mostrarColunas"></mat-header-row>
     <mat-row *matRowDef="let row; columns: mostrarColunas;"></mat-row>
 
     <ng-container matColumnDef="usuário">
       <th mat-header-cell *matHeaderCellDef> Usuários </th>
       <td mat-cell *matCellDef="let item"> {{item}} </td>
     </ng-container>
-
-  </table>
-</div>
+      </table>
+    </div>
+-->
 
 

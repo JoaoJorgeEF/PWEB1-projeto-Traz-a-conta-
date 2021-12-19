@@ -10,15 +10,10 @@ import { MesaService } from 'src/app/shared/services/mesa.service';
   styleUrls: ['./cadastra-mesas.component.scss']
 })
 export class CadastraMesasComponent implements OnInit {
-
   mesa: Mesa;
-  usuario = '';
-  dataSource: MatTableDataSource<string>;
-  mostrarColunas = ['usuário'];
 
   constructor(private mesaService: MesaService, private route: ActivatedRoute, private router: Router) {
     this.mesa = new Mesa();
-    this.dataSource = new MatTableDataSource(this.mesa.usuarios);
   }
 
   ngOnInit(): void {
@@ -29,11 +24,11 @@ export class CadastraMesasComponent implements OnInit {
     }
   }
 
-  inserirNaLista(usuario: string): void {
-    this.mesa.usuarios.push(usuario);
-    this.usuario = '';
-    this.dataSource = new MatTableDataSource(this.mesa.usuarios);
-  }
+//  inserirNaLista(usuario: string): void {
+//    this.mesa.usuarios.push(usuario);
+//    this.usuario = '';
+//    this.dataSource = new MatTableDataSource(this.mesa.usuarios);
+//  }
 
   inserir(mesa: Mesa): void{
     this.mesaService.inserir(mesa).subscribe(

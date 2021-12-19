@@ -11,14 +11,13 @@ public class Mesa {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ElementCollection
-    private List<String> usuarios = new ArrayList<String>();
+    private String numUsuarios;
 
-    public List<String> getUsuarios() {
-        return usuarios;
+    public String getNumUsuarios() {
+        return numUsuarios;
     }
 
-    public void setUsuarios(List<String> usuarios) {
-        this.usuarios = usuarios;
+    public void setUsuarios(String usuarios) {
+        this.numUsuarios = usuarios;
     }
 }

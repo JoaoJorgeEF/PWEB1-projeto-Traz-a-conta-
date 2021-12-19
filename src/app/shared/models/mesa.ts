@@ -1,9 +1,9 @@
 export class Mesa {
   id: number;
-  usuarios: Array<string> //TODO implementar a classe usuarios
+  usuarios: string;
 
-  constructor(id: number = 0){
+  constructor(id: number = 0,numUsuarios = '' ){
     this.id = id;
-    this.usuarios = new Array<string>();
+    this.usuarios = numUsuarios;
   }
 }

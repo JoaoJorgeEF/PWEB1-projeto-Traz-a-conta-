@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Mesa } from 'src/app/shared/models/mesa';
-import { MesaService } from 'src/app/shared/services/mesa.service';
+import { Mesa } from '../../shared/models/mesa';
+import { MesaService } from '../../shared/services/mesa.service';
 
 @Component({
   selector: 'app-lista-mesas',
@@ -22,7 +22,7 @@ export class ListaMesasComponent implements OnInit {
   }
 
   editar(mesa: Mesa): void {
-    this.router.navigate(['/cadastrarmesa', mesa.id])
+    this.router.navigate(['/cadastrarmesas', mesa.id])
   }
 
   remover(mesa: Mesa): void {

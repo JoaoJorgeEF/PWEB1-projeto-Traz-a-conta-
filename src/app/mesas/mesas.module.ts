@@ -18,6 +18,10 @@ import {MatTableModule} from '@angular/material/table';
     ListaMesasComponent,
     CadastraMesasComponent
   ],
+  exports:[
+    ListaMesasComponent,
+    CadastraMesasComponent
+  ],
   imports: [
     CommonModule,
     RouterModule,
