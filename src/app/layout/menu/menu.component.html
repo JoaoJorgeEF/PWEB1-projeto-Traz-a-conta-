@@ -5,5 +5,10 @@
     <button mat-menu-item [routerLink]="['/cadastraritemcardapio']">Cadastrar Item</button>
     <button mat-menu-item [routerLink]="['/listaritenscardapio']">Listar</button>
   </mat-menu>
+  <button mat-raised-button [matMenuTriggerFor]="menuMesas" color="primary">Mesas</button>
+  <mat-menu #menuMesas="matMenu">
+    <button mat-menu-item [routerLink]="['/cadastrarmesas']">Cadastrar Mesa</button>
+    <button mat-menu-item [routerLink]="['/listarmesas']">Listar</button>
+  </mat-menu>
   <button mat-raised-button color="primary">Log in</button>
 </div>

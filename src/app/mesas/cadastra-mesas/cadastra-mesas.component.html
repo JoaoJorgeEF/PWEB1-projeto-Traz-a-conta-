@@ -1,0 +1,48 @@
+<div fxLayoutAlign="center">
+  <mat-card class="card-insercao">
+    <mat-card-header>
+      <mat-card-title *ngIf="mesa.id == 0">Inserir Mesa</mat-card-title>
+      <mat-card-title *ngIf="mesa.id != 0">Editar Mesa</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content align="center">
+
+      <mat-form-field apperance="fill" class="mat-form-simples">
+        <mat-label>Usuários</mat-label>
+        <input matInput [(ngModel)]="usuario" placeholder="Digite o nome">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="inserirNaLista(usuario)">
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-card-content>
+    <mat-card-content>
+
+    </mat-card-content>
+    <mat-card-footer align="center">
+      <button *ngIf="mesa.id == 0" mat-raised-button color="primary" (click)="inserir(mesa)">
+        <mat-icon>add</mat-icon> Adicionar
+      </button>
+      <button *ngIf="mesa.id != 0" mat-raised-button color="primary" (click)="inserir(mesa)">
+        <mat-icon>edit</mat-icon> Salvar
+      </button>
+    </mat-card-footer>
+
+  </mat-card>
+</div>
+
+<br>
+
+<div fxLayoutAlign="center">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <mat-header-row *matHeaderRowDef="mostrarColunas"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: mostrarColunas;"></mat-row>
+
+    <ng-container matColumnDef="usuário">
+      <th mat-header-cell *matHeaderCellDef> Usuários </th>
+      <td mat-cell *matCellDef="let item"> {{item}} </td>
+    </ng-container>
+
+  </table>
+</div>
+
+

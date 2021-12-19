@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ItemCardapio} from "../../shared/models/item-cardapio";
 import {ItemCardapioService} from "../../shared/services/item-cardapio.service";
 import {Router} from "@angular/router";
-import {ItensCardapioFirestoreService} from "../../shared/services/itens-cardapio-firestore.service";
+//import {ItensCardapioFirestoreService} from "../../shared/services/itens-cardapio-firestore.service";
 import firebase from "firebase/compat";
 import Item = firebase.analytics.Item;
 
@@ -14,7 +14,7 @@ import Item = firebase.analytics.Item;
 export class ListagemItensCardapioComponent implements OnInit {
   itensCardapio: Array<ItemCardapio>;
 
-  constructor(private itemCardapioService: ItensCardapioFirestoreService, private router: Router) {
+  constructor(private itemCardapioService: ItemCardapioService, private router: Router) {
     this.itensCardapio = new Array<ItemCardapio>();
   }
 
@@ -30,7 +30,7 @@ export class ListagemItensCardapioComponent implements OnInit {
 
 
   remover(itemCardapio: ItemCardapio): void {
-    if (itemCardapio.id != null) {
+    //if (itemCardapio.id != null) {
       this.itemCardapioService.remover(itemCardapio.id).subscribe(
         resposta => {
           const index = this.itensCardapio.findIndex(i => i.id === itemCardapio.id);
@@ -39,6 +39,6 @@ export class ListagemItensCardapioComponent implements OnInit {
           }
         }
       )
-    }
+    //}
   }
 }

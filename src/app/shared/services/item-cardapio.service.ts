@@ -8,7 +8,7 @@ import {ItemCardapio} from "../models/item-cardapio";
 })
 export class ItemCardapioService {
 
-  URL_ITENSCARDAPIO = "http://localhost:3000/itens-cardapio";
+  URL_ITENSCARDAPIO = "http://localhost:8080/itensCardapio";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -25,7 +25,7 @@ export class ItemCardapioService {
   }
 
   editar(itemCardapio: ItemCardapio): Observable<ItemCardapio> {
-    return this.httpClient.put<ItemCardapio>(`${this.URL_ITENSCARDAPIO}/${itemCardapio.id}`, itemCardapio);
+    return this.httpClient.put<ItemCardapio>(`${this.URL_ITENSCARDAPIO}`, itemCardapio);
   }
 
   remover(id: number): Observable<object> {

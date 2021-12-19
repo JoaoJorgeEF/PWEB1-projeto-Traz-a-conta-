@@ -11,11 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from "@angular/router";
 import { TestePipe } from './shared/pipes/teste.pipe';
 import {FirestoreModule} from "./firestore/firestore.module";
+import { MesasModule } from './mesas/mesas.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestePipe
+    TestePipe,
   ],
   imports: [
     AppRoutingModule,
@@ -25,6 +26,7 @@ import {FirestoreModule} from "./firestore/firestore.module";
     LayoutModule,
     HomeModule,
     ItensCardapioModule,
+    MesasModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FirestoreModule
