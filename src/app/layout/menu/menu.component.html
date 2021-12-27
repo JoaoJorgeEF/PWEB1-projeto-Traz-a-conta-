@@ -10,5 +10,10 @@
     <button mat-menu-item [routerLink]="['/cadastrarmesas']">Cadastrar Mesa</button>
     <button mat-menu-item [routerLink]="['/listarmesas']">Listar</button>
   </mat-menu>
+  <button mat-raised-button [matMenuTriggerFor]="menuUsuarios" color="primary">Usuários</button>
+  <mat-menu #menuUsuarios="matMenu">
+    <button mat-menu-item [routerLink]="['/cadastrarusuarios']">Cadastrar Usuário</button>
+    <button mat-menu-item [routerLink]="['/listarusuarios']">Listar</button>
+  </mat-menu>
   <button mat-raised-button color="primary">Log in</button>
 </div>

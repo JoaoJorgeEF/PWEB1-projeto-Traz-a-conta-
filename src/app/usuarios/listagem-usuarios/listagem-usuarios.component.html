@@ -1,0 +1,18 @@
+<div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center" >
+  <mat-card *ngFor="let usuario of usuarios" class="mat-card-simples" fxFlex="25%" fxFlex="grow shrink initial"
+  fxFlex="0 1 350px">
+    <mat-card-header>
+
+      <mat-card-title>
+        <mat-icon>supervised_user_circle</mat-icon>
+        {{usuario.nome}}
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-actions>
+      <button class="mat-card-actions-button" mat-fab color="primary" (click)="editar(usuario)"><mat-icon>create</mat-icon></button>
+      <button class="mat-card-actions-button" mat-fab color="primary" (click)="remover(usuario)"><mat-icon>delete</mat-icon></button>
+    </mat-card-actions>
+
+  </mat-card>
+</div>

@@ -5,6 +5,8 @@ import {CadastroItensCardapioComponent} from "./itens-cardapio/cadastro-itens-ca
 import {ListagemItensCardapioComponent} from "./itens-cardapio/listagem-itens-cardapio/listagem-itens-cardapio.component";
 import { CadastraMesasComponent } from './mesas/cadastra-mesas/cadastra-mesas.component';
 import { ListaMesasComponent } from './mesas/lista-mesas/lista-mesas.component';
+import { CadastroUsuariosComponent } from './usuarios/cadastro-usuarios/cadastro-usuarios.component';
+import { ListagemUsuariosComponent } from './usuarios/listagem-usuarios/listagem-usuarios.component';
 
 const routes: Routes = [
   { path: 'home',
@@ -27,6 +29,15 @@ const routes: Routes = [
   },
   { path: 'listarmesas',
     component: ListaMesasComponent
+  },
+  { path: 'cadastrarusuarios',
+    component: CadastroUsuariosComponent
+  },
+  { path: 'cadastrarusuarios/:id',
+    component: CadastroUsuariosComponent
+  },
+  { path: 'listarusuarios',
+    component: ListagemUsuariosComponent
   },
   { path: '',
     redirectTo: '/home',

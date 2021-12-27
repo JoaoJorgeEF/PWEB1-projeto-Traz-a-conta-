@@ -12,6 +12,7 @@ import { RouterModule } from "@angular/router";
 import { TestePipe } from './shared/pipes/teste.pipe';
 import {FirestoreModule} from "./firestore/firestore.module";
 import { MesasModule } from './mesas/mesas.module';
+import { UsuariosModule } from './usuarios/usuarios.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MesasModule } from './mesas/mesas.module';
     MesasModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FirestoreModule
+    FirestoreModule,
+    UsuariosModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
