@@ -22,6 +22,9 @@ const routes: Routes = [
   { path: 'cadastrarmesas',
     component: CadastraMesasComponent
   },
+  { path: 'cadastrarmesas/:id',
+    component: CadastraMesasComponent
+  },
   { path: 'listarmesas',
     component: ListaMesasComponent
   },

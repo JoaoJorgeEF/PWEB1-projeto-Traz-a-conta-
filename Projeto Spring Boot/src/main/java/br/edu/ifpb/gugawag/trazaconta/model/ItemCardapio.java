@@ -8,15 +8,24 @@ import java.util.Currency;
 public class ItemCardapio {
 
     @Id
+    @Column(name="id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long Id;
 
     private String nome;
     private String tipo;
     private String descricao;
     private BigDecimal preco;
 
-    public String getNome() {
+  public Long getId() {
+    return Id;
+  }
+
+  public void setId(Long id) {
+    this.Id = id;
+  }
+
+  public String getNome() {
         return nome;
     }
 

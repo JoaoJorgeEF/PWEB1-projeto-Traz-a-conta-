@@ -20,7 +20,7 @@ export class ListagemItensCardapioComponent implements OnInit {
 
   ngOnInit(): void {
     this.itemCardapioService.listar().subscribe(
-      itensCardapio => this.itensCardapio = itensCardapio
+      itensCardapio => {this.itensCardapio = itensCardapio; console.log(itensCardapio)}
     )
   }
 
