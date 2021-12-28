@@ -1,19 +1,25 @@
-<div class="menu-background" >
-  <button mat-raised-button color="primary" [routerLink]="['/home']">Home</button>
-  <button mat-raised-button [matMenuTriggerFor]="menu" color="primary">Cardápio</button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item [routerLink]="['/cadastraritemcardapio']">Cadastrar Item</button>
-    <button mat-menu-item [routerLink]="['/listaritenscardapio']">Listar</button>
-  </mat-menu>
-  <button mat-raised-button [matMenuTriggerFor]="menuMesas" color="primary">Mesas</button>
-  <mat-menu #menuMesas="matMenu">
-    <button mat-menu-item [routerLink]="['/cadastrarmesas']">Cadastrar Mesa</button>
-    <button mat-menu-item [routerLink]="['/listarmesas']">Listar</button>
-  </mat-menu>
-  <button mat-raised-button [matMenuTriggerFor]="menuUsuarios" color="primary">Usuários</button>
-  <mat-menu #menuUsuarios="matMenu">
-    <button mat-menu-item [routerLink]="['/cadastrarusuarios']">Cadastrar Usuário</button>
-    <button mat-menu-item [routerLink]="['/listarusuarios']">Listar</button>
-  </mat-menu>
-  <button mat-raised-button color="primary">Log in</button>
+<div class="menu-background row">
+
+  <div class="col-md-10">
+      <button mat-raised-button color="primary" [routerLink]="['/home']">Home</button>
+      <button mat-raised-button [matMenuTriggerFor]="menu" color="primary">Cardápio</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="['/cadastraritemcardapio']">Cadastrar Item</button>
+        <button mat-menu-item [routerLink]="['/listaritenscardapio']">Listar</button>
+      </mat-menu>
+      <button mat-raised-button [matMenuTriggerFor]="menuMesas" color="primary">Mesas</button>
+      <mat-menu #menuMesas="matMenu">
+        <button mat-menu-item [routerLink]="['/cadastrarmesas']">Cadastrar Mesa</button>
+        <button mat-menu-item [routerLink]="['/listarmesas']">Listar</button>
+      </mat-menu>
+  </div>
+
+  <div class="col-md-offset col-md-2" dir="rtl" fxLayoutGap="20px">
+      <button mat-raised-button [matMenuTriggerFor]="menuUsuarios" color="primary">Usuários</button>
+      <mat-menu #menuUsuarios="matMenu">
+        <button mat-menu-item [routerLink]="['/cadastrarusuarios']">Cadastrar Usuário</button>
+        <button mat-menu-item [routerLink]="['/listarusuarios']">Listar</button>
+      </mat-menu>
+  </div>
+
 </div>
