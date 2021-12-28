@@ -12,10 +12,15 @@
         <button mat-menu-item [routerLink]="['/cadastrarmesas']">Cadastrar Mesa</button>
         <button mat-menu-item [routerLink]="['/listarmesas']">Listar</button>
       </mat-menu>
+      <button mat-raised-button [matMenuTriggerFor]="menuPedidos" color="primary">Pedidos</button>
+      <mat-menu #menuPedidos="matMenu">
+        <button mat-menu-item [routerLink]="['/cadastrarpedidos']">Cadastrar Pedido</button>
+        <button mat-menu-item [routerLink]="['/listarpedidos']">Listar</button>
+      </mat-menu>
   </div>
 
   <div class="col-md-offset col-md-2" dir="rtl" fxLayoutGap="20px">
-      <button mat-raised-button [matMenuTriggerFor]="menuUsuarios" color="primary">Usuários</button>
+      <button mat-mini-fab [matMenuTriggerFor]="menuUsuarios" color="primary"><mat-icon>account_circle</mat-icon></button>
       <mat-menu #menuUsuarios="matMenu">
         <button mat-menu-item [routerLink]="['/cadastrarusuarios']">Cadastrar Usuário</button>
         <button mat-menu-item [routerLink]="['/listarusuarios']">Listar</button>
