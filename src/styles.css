@@ -3,4 +3,20 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: "Open Sans", "Helvetica Neue", sans-serif; }
 
+snack-bar-container.success {
+  background-color: green;
+}
+
+snack-bar-container.error {
+  background-color: rgb(180, 90, 90);
+}
+
+snack-bar-container.warning {
+  background-color: rgb(192, 146, 20);
+}
+
+snack-bar-container.info {
+  background-color: rgb(91, 5, 141);
+}
+
 

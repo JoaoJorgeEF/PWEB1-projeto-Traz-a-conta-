@@ -13,6 +13,8 @@ import { TestePipe } from './shared/pipes/teste.pipe';
 import {FirestoreModule} from "./firestore/firestore.module";
 import { MesasModule } from './mesas/mesas.module';
 import { UsuariosModule } from './usuarios/usuarios.module';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import { InterceptorModule } from './interceptor/interceptor.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { UsuariosModule } from './usuarios/usuarios.module';
     HttpClientModule,
     FirestoreModule,
     UsuariosModule,
+    MatSnackBarModule,
+    InterceptorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

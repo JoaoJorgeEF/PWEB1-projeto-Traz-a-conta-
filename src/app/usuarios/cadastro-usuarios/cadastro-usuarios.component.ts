@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/shared/models/usuario';
+import { MensagemService } from 'src/app/shared/services/mensagem.service';
 import { UsuariosService } from 'src/app/shared/services/usuarios.service';
 
 @Component({
@@ -12,7 +14,7 @@ export class CadastroUsuariosComponent implements OnInit {
 
   usuario: Usuario;
 
-  constructor(private usuarioService: UsuariosService,private route: ActivatedRoute, private router: Router) {
+  constructor(private usuarioService: UsuariosService,private route: ActivatedRoute, private router: Router, private mensagemService: MensagemService) {
     this.usuario = new Usuario();
   }
 
@@ -26,7 +28,10 @@ export class CadastroUsuariosComponent implements OnInit {
 
   inserir(usuario: Usuario): void{
     this.usuarioService.inserir(usuario).subscribe(
-      usuario => this.router.navigate(['/listarusuarios'])
+      usuario => {
+        this.mensagemService.success('Usuário salvo com sucesso!');
+        this.router.navigate(['/listarusuarios'])
+      }
     );
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/shared/models/usuario';
+import { MensagemService } from 'src/app/shared/services/mensagem.service';
 import { UsuariosService } from 'src/app/shared/services/usuarios.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { UsuariosService } from 'src/app/shared/services/usuarios.service';
 export class ListagemUsuariosComponent implements OnInit {
   usuarios: Array<Usuario>;
 
-  constructor(private usuariosService: UsuariosService, private router: Router) {
+  constructor(private usuariosService: UsuariosService, private router: Router, private mensagemService: MensagemService) {
     this.usuarios = new Array<Usuario>();
   }
 
@@ -28,6 +29,7 @@ export class ListagemUsuariosComponent implements OnInit {
   remover(usuario: Usuario): void {
     this.usuariosService.remover(usuario.id).subscribe(
       resposta => {
+        this.mensagemService.success('Usuário removido com sucesso!');
         const index = this.usuarios.findIndex(i => i.id === usuario.id);
         if (index > -1) {
           this.usuarios.splice(index, 1);
