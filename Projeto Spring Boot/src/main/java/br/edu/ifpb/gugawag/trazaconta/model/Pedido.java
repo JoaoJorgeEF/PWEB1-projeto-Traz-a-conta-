@@ -22,6 +22,9 @@ public class Pedido {
   @OneToMany
   private List<ItemCardapio> itensCardapio;
 
+  @Column(name="quantidade")
+  private int quantidade;
+
   public Long getId() {
     return Id;
   }
@@ -53,4 +56,9 @@ public class Pedido {
   public void setItensCardapio(List<ItemCardapio> itensCardapio) {
     this.itensCardapio = itensCardapio;
   }
+
+  public void setQuantidade(int quantidade){
+    this.quantidade = quantidade;
+  }
+  public int getQuantidade(return this.quantidade);
 }

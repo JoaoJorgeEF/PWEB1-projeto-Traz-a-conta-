@@ -4,9 +4,15 @@
     <mat-card-header>
 
       <mat-card-title>
-        <mat-icon>supervised_user_circle</mat-icon>
-        {{pedido.id}}
+        <mat-icon>receipt_long</mat-icon>
+        Mesa {{pedido.mesa.id}}
       </mat-card-title>
+
+<!--      Falta achar uma maneira de capturar a ação do toggle e bloquear o botão de editar-->
+<!--      A ideia é que enquanto a conta esteja bloqueada, não seja possível fazer novos pedidos-->
+<!--      A conta tem vários motivos para estar bloqueada-->
+     <mat-slide-toggle>Bloquear Pedidos</mat-slide-toggle>
+
     </mat-card-header>
 
     <mat-card-actions>

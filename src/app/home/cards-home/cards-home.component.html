@@ -1,16 +1,30 @@
 <div class="cards-container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center" >
-  <mat-card class="mat-card-main" fxFlex="25%" fxFlex="grow shrink initial" fxFlex="0 1 300px" [routerLink]="['/listaritenscardapio']">
+  <mat-card class="mat-card-main" fxFlex="25%" fxFlex="grow shrink initial" fxFlex="0 1 calc(35% - 50px)" [routerLink]="['/listaritenscardapio']">
   <mat-card-title class="mat-card-main-info">
-    <mat-icon class="mat-card-main-icon">restaurant</mat-icon>
+    <mat-icon class="mat-card-main-icon">menu_book</mat-icon>
     <h1 class="mat-card-main-name" >Cardápio</h1>
   </mat-card-title>
   </mat-card>
 
-  <mat-card class="mat-card-main" fxFlex="25%" fxFlex="grow shrink initial" fxFlex="0 1 300px">
-  <mat-card-title class="mat-card-main-info">
-    <mat-icon class="mat-card-main-icon">engineering</mat-icon>
-    <h1 class="mat-card-main-name" >Em construção</h1>
-  </mat-card-title>
+  <mat-card class="mat-card-main" fxFlex="25%" fxFlex="grow shrink initial" fxFlex="0 1 calc(35% - 50px)" [routerLink]="['/listarmesas']">
+    <mat-card-title class="mat-card-main-info">
+      <mat-icon class="mat-card-main-icon">table_restaurant</mat-icon>
+      <h1 class="mat-card-main-name" >Mesas</h1>
+    </mat-card-title>
+  </mat-card>
+
+  <mat-card class="mat-card-main" fxFlex="25%" fxFlex="grow shrink initial" fxFlex="0 1 calc(35% - 50px)" [routerLink]="['/listarpedidos']">
+    <mat-card-title class="mat-card-main-info">
+      <mat-icon class="mat-card-main-icon">receipt_long</mat-icon>
+      <h1 class="mat-card-main-name" >Pedidos</h1>
+    </mat-card-title>
+  </mat-card>
+
+  <mat-card class="mat-card-main" fxFlex="25%" fxFlex="grow shrink initial" fxFlex="0 1 calc(35% - 50px)" [routerLink]="['/listarusuarios']">
+    <mat-card-title class="mat-card-main-info">
+      <mat-icon class="mat-card-main-icon">groups</mat-icon>
+      <h1 class="mat-card-main-name" >Clientes</h1>
+    </mat-card-title>
   </mat-card>
 
 </div>

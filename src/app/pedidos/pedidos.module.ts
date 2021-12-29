@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 
 
 
@@ -31,7 +32,11 @@ import { MatTableModule } from '@angular/material/table';
     FormsModule,
     MatSnackBarModule,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    MatSlideToggleModule
+  ],
+  exports: [
+      MatSlideToggleModule
   ]
 })
 export class PedidosModule { }

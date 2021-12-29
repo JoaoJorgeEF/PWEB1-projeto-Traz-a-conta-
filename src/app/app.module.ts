@@ -16,6 +16,7 @@ import { UsuariosModule } from './usuarios/usuarios.module';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import { InterceptorModule } from './interceptor/interceptor.module';
 import { PedidosModule } from './pedidos/pedidos.module';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,11 @@ import { PedidosModule } from './pedidos/pedidos.module';
     UsuariosModule,
     MatSnackBarModule,
     InterceptorModule,
-    PedidosModule
+    PedidosModule,
+    MatSlideToggleModule
+  ],
+  exports: [
+      MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
