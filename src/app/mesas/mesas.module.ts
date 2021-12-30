@@ -10,6 +10,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 
@@ -32,6 +35,9 @@ import {MatTableModule} from '@angular/material/table';
     MatIconModule,
     FormsModule,
     MatTableModule,
+    MatSnackBarModule,
+    MatSelectModule,
+    MatSlideToggleModule
   ]
 })
 export class MesasModule { }

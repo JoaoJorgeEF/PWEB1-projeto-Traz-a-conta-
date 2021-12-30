@@ -24,6 +24,8 @@ export class CadastrarPedidosComponent implements OnInit {
   itensCardapio: Array<ItemCardapio>;
   itensNaLista: Array<ItemCardapio>;
   selectData: ItemCardapio = new ItemCardapio();
+  usuariosDaMesa: Array<Usuario>;
+  mesaSelecionada: Mesa = new Mesa();
 
   dataSource: MatTableDataSource<ItemCardapio> = new MatTableDataSource<ItemCardapio>();
   mostrarColunas = ['id', 'nome', 'preco', 'acoes'];
@@ -37,6 +39,7 @@ export class CadastrarPedidosComponent implements OnInit {
                private mensagemService: MensagemService) {
     this.pedido = new Pedido();
     this.usuarios = new Array<Usuario>();
+    this.usuariosDaMesa = new Array<Usuario>();
     this.mesas = new Array<Mesa>();
     this.itensCardapio = new Array<ItemCardapio>();
     this.itensNaLista = new Array<ItemCardapio>();
@@ -66,6 +69,7 @@ export class CadastrarPedidosComponent implements OnInit {
   }
 
   inserir(pedido: Pedido): void{
+    this.pedido.itensCardapio.forEach(i => this.pedido.precoTotal += i.preco);
     pedido.itensCardapio = this.pedido.itensCardapio;
     this.pedidosService.inserir(pedido).subscribe(
       pedido => {
@@ -92,5 +96,9 @@ export class CadastrarPedidosComponent implements OnInit {
 
   valorSelecionado(event: MatSelectChange){
     this.selectData = event.value;
+  }
+
+  usuarioSelecionado(event: MatSelectChange){
+    this.mesaSelecionada = event.value;
   }
 }

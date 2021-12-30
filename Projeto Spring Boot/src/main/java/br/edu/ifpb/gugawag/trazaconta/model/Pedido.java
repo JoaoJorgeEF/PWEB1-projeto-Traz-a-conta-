@@ -19,14 +19,33 @@ public class Pedido {
   @JoinColumn(name = "mesa_id")
   private Mesa mesa;
 
-  @OneToMany
+  @ManyToMany
   private List<ItemCardapio> itensCardapio;
 
-  @Column(name="quantidade")
-  private int quantidade;
+  @Column(name="preco_total")
+  private double precoTotal;
+
+  @Column(name="status")
+  private boolean status;
+
+  public double getPrecoTotal() {
+    return precoTotal;
+  }
+
+  public void setPrecoTotal(double precoTotal) {
+    this.precoTotal = precoTotal;
+  }
 
   public Long getId() {
     return Id;
+  }
+
+  public boolean isStatus() {
+    return status;
+  }
+
+  public void setStatus(boolean status) {
+    this.status = status;
   }
 
   public void setId(Long id) {
@@ -56,9 +75,4 @@ public class Pedido {
   public void setItensCardapio(List<ItemCardapio> itensCardapio) {
     this.itensCardapio = itensCardapio;
   }
-
-  public void setQuantidade(int quantidade){
-    this.quantidade = quantidade;
-  }
-  public int getQuantidade(return this.quantidade);
 }

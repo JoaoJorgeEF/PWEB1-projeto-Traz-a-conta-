@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import { Router } from '@angular/router';
+import { ItemCardapio } from 'src/app/shared/models/item-cardapio';
 import { Pedido } from 'src/app/shared/models/pedido';
 import { MensagemService } from 'src/app/shared/services/mensagem.service';
 import { PedidosService } from 'src/app/shared/services/pedidos.service';
@@ -39,4 +41,17 @@ export class ListarPedidosComponent implements OnInit {
       }
     )
   }
+
+  desativarEdicao(event: MatSlideToggleChange, pedido: Pedido): void {
+    if(pedido.status) {
+      pedido.status = false;
+      this.pedidosService.inserir(pedido).subscribe();
+    } else {
+      pedido.status = true;
+      this.pedidosService.inserir(pedido).subscribe();
+    }
+    console.log(pedido.status);
+
+  }
+
 }

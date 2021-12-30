@@ -12,7 +12,16 @@ public class Mesa {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
 
-    private String usuarios;
+    @OneToMany
+    private List<Usuario> usuarios;
+
+  public List<Usuario> getUsuarios() {
+    return usuarios;
+  }
+
+  public void setUsuarios(List<Usuario> usuarios) {
+    this.usuarios = usuarios;
+  }
 
   public Long getId() {
     return Id;
@@ -22,11 +31,4 @@ public class Mesa {
     this.Id = id;
   }
 
-  public String getUsuarios() {
-        return usuarios;
-    }
-
-    public void setUsuarios(String usuarios) {
-        this.usuarios = usuarios;
-    }
 }

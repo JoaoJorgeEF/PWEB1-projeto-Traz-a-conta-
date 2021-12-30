@@ -3,6 +3,7 @@ package br.edu.ifpb.gugawag.trazaconta.model;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Currency;
+import java.util.List;
 
 @Entity
 public class ItemCardapio {
@@ -16,6 +17,9 @@ public class ItemCardapio {
     private String tipo;
     private String descricao;
     private BigDecimal preco;
+
+    @ManyToMany(mappedBy="itensCardapio")
+    private List<Pedido> pedidos;
 
   public Long getId() {
     return Id;

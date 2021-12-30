@@ -1,9 +1,11 @@
+import { Usuario } from "./usuario";
+
 export class Mesa {
   id: number;
-  usuarios: string;
+  usuarios: Array<Usuario>;
 
-  constructor(id: number = 0,numUsuarios = '' ){
+  constructor(id: number = 0){
     this.id = id;
-    this.usuarios = numUsuarios;
+    this.usuarios = new Array<Usuario>();
   }
 }
